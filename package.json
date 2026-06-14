@@ -1,0 +1,11 @@
+{
+  "name": "idkit",
+  "version": "1.0.0",
+  "description": "Zero-dep ID generation: UUID v4/v7, ULID, NanoID, Snowflake, Cuid2",
+  "main": "index.js",
+  "bin": { "idkit": "cli.js" },
+  "scripts": { "test": "node test.js" },
+  "keywords": ["id", "uuid", "ulid", "nanoid", "snowflake", "cuid", "unique"],
+  "license": "MIT",
+  "author": "sulthonzh"
+}
