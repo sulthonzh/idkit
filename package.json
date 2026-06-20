@@ -3,10 +3,38 @@
   "version": "1.0.0",
   "description": "Zero-dep ID generation: UUID v4/v7, ULID, NanoID, Snowflake, Cuid2",
   "main": "index.js",
-  "bin": { "idkit": "cli.js" },
-  "files": ["cli.js", "index.js", "README.md", "LICENSE"],
-  "scripts": { "test": "node test.js" },
-  "keywords": ["id", "uuid", "ulid", "nanoid", "snowflake", "cuid", "unique"],
+  "bin": {
+    "idkit": "cli.js"
+  },
+  "files": [
+    "cli.js",
+    "index.js",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "test": "node test.js"
+  },
+  "keywords": [
+    "id",
+    "uuid",
+    "ulid",
+    "nanoid",
+    "snowflake",
+    "cuid",
+    "unique"
+  ],
   "license": "MIT",
-  "author": "sulthonzh"
+  "author": "sulthonzh",
+  "engines": {
+    "node": ">=18"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sulthonzh/idkit.git"
+  },
+  "homepage": "https://github.com/sulthonzh/idkit#readme",
+  "bugs": {
+    "url": "https://github.com/sulthonzh/idkit/issues"
+  }
 }
