@@ -36,5 +36,8 @@
   "homepage": "https://github.com/sulthonzh/idkit#readme",
   "bugs": {
     "url": "https://github.com/sulthonzh/idkit/issues"
+  },
+  "devDependencies": {
+    "@changesets/cli": "^2.31.0"
   }
 }
