@@ -7,3 +7,8 @@ __pycache__/
 .venv/
 *.egg-info/
 .mypy_cache/
+
+*.log
+*.tgz
+coverage/
+.DS_Store
