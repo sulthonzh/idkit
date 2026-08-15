@@ -1,5 +1,5 @@
 {
-  "name": "idkit",
+  "name": "@quadbyte/idkit",
   "version": "1.0.0",
   "description": "Zero-dep ID generation: UUID v4/v7, ULID, NanoID, Snowflake, Cuid2",
   "main": "index.js",

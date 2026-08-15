@@ -9,13 +9,13 @@ Every project needs unique IDs. Most reach for `uuid` or `nanoid` — but what i
 ## Install
 
 ```bash
-npm install idkit
+npm install @quadbyte/idkit
 ```
 
 ## Quick Start
 
 ```js
-const { uuidv4, uuidv7, ulid, nanoid, cuid2, createSnowflake } = require('idkit');
+const { uuidv4, uuidv7, ulid, nanoid, cuid2, createSnowflake } = require('@quadbyte/idkit');
 
 uuidv4();      // "f47ac10b-58cc-4372-a567-0e02b2c3d479"
 uuidv7();      // "019ec665-b7f1-7b7f-9c66-5b7f1722fa1d" (time-ordered)
@@ -33,7 +33,7 @@ sf.next();     // "17665072866650673152" (64-bit distributed)
 RFC 4122 compliant random UUID.
 
 ```js
-const { uuidv4 } = require('idkit');
+const { uuidv4 } = require('@quadbyte/idkit');
 
 uuidv4();  // → "f47ac10b-58cc-4372-a567-0e02b2c3d479"
 ```
@@ -43,7 +43,7 @@ uuidv4();  // → "f47ac10b-58cc-4372-a567-0e02b2c3d479"
 RFC 9562 time-ordered UUID. First 48 bits encode a Unix millisecond timestamp, making IDs naturally sortable.
 
 ```js
-const { uuidv7, uuidv7Timestamp } = require('idkit');
+const { uuidv7, uuidv7Timestamp } = require('@quadbyte/idkit');
 
 uuidv7();                          // → "019ec665-b7f1-7b7f-9c66-5b7f1722fa1d"
 uuidv7(1700000000000);             // custom timestamp
@@ -55,7 +55,7 @@ uuidv7Timestamp('019ec665-b7f1-7b7f-9c66-5b7f1722fa1d');  // → 1700000000000
 26-character Crockford Base32 encoded, lexicographically sortable ID.
 
 ```js
-const { ulid, ulidTimestamp } = require('idkit');
+const { ulid, ulidTimestamp } = require('@quadbyte/idkit');
 
 ulid();                // → "01ARZ3NDEKTSV4RRFFQ69G5FAV"
 ulid(1700000000000);   // custom timestamp
@@ -67,7 +67,7 @@ ulidTimestamp('01ARZ3NDEKTSV4RRFFQ69G5FAV');  // → 1700000000000
 Compact, URL-safe ID with configurable alphabet and size.
 
 ```js
-const { nanoid, nanoidCustom } = require('idkit');
+const { nanoid, nanoidCustom } = require('@quadbyte/idkit');
 
 nanoid();                              // → "v3nbgx2kqj8mzrpt5w0uy" (21 chars)
 nanoid({ size: 10 });                  // → "v3nbgx2kqj"
@@ -80,7 +80,7 @@ nanoidCustom('XYZ', 12);               // → "XZYXYZXZYZXY"
 Twitter-style 64-bit distributed ID generator. Encodes timestamp + machine ID + sequence number.
 
 ```js
-const { createSnowflake, decodeSnowflake } = require('idkit');
+const { createSnowflake, decodeSnowflake } = require('@quadbyte/idkit');
 
 const sf = createSnowflake({
   epoch: 1700000000000,  // custom epoch (default: Twitter epoch 1288834974657)
@@ -108,7 +108,7 @@ const sf = createSnowflake({
 Collision-resistant IDs designed for horizontal scaling. Combines timestamp, counter, fingerprint, and randomness.
 
 ```js
-const { cuid2 } = require('idkit');
+const { cuid2 } = require('@quadbyte/idkit');
 
 cuid2();                // → "clh6e8j3a0000pb8x2kqj8mzr" (24 chars)
 cuid2({ size: 32 });    // → longer ID
@@ -117,7 +117,7 @@ cuid2({ size: 32 });    // → longer ID
 ### Utilities
 
 ```js
-const { batch, isValid } = require('idkit');
+const { batch, isValid } = require('@quadbyte/idkit');
 
 // Generate multiple IDs
 batch(uuidv4, 5);      // → ["id1", "id2", "id3", "id4", "id5"]
